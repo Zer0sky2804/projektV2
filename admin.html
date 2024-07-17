@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogPage</title>
+    <link rel="stylesheet" href="admin.css">
+
+    <style>
+    /*zeptat se proc to funguje jen kdyz je to tady*/
+    #nav{
+    width: 100%;
+    background-color: #181717;
+    overflow: auto;
+    }
+  
+    #nav a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 30px;
+    }
+  
+    #nav a:hover {
+    background-color: #000;
+    }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 id="page-title">/h1>
+    </div>
+    <div id="nav">
+        <a href="creator.html">Creator</a>
+        <a href="">Novinky</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="sett.html">Nastavení</a>
+        <a href="register.html">Přidat uživatele</a>
+    </div>
+    
+      
+    <div id="content">
+        <img id="uploaded-image" src="" alt="Obrázek" style="display:none;">
+        <input type="file" id="file-input" accept="image/*" style="display:none;">
+    </div>
+    <div id="footer">
+        <button id="change-title-button">Změnit Nadpis</button>
+        <button id="change-image-button">Změnit Obrázek</button>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

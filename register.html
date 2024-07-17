@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>Registrace</title>
+</head>
+<body>
+    <div class="container">
+        <div class="formular">
+            <form id="login-form" name="login-form" action="registrace.php" method="POST">
+                <h2>Přidání uživatele</h2>
+                <label for="nickname">Jméno:</label><br>
+                <input type="text" id="nickname" name="nickname" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="password">Heslo:</label><br>
+                <input type="password" id="password" name="password" required><br>
+                <button type="submit">Přidat uživatele</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

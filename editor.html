@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="creator.css">
+    <title>Editor</title>
+</head>
+<body>
+    <div class="header">
+        <div class="hl"><hl class="hl">Editor</hl></div>
+    </div>
+    <div class="table" id="table">
+        
+        <div id="blog-form">
+            
+            <form action="newblog.php" method="post" enctype="multipart/form-data">
+                <label for="blog-title">Nadpis:</label>
+                <input type="text" id="blog-title" name="blog-title" required>
+    
+                <label for="blog-content">Kontent:</label>
+                <textarea id="blog-content" name="blog-content" rows="8" required></textarea>
+
+                <label for="blog-image">Vložit obrázek:</label>
+                <input type="file" id="blog-image" name="blog-image" accept="image/*"><br><br>
+
+                <button type="submit">Potvrdit</button>
+            </form>
+        </div>
+        
+        
+</div>
+</body>
+</html>
