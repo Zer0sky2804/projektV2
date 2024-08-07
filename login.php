@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+session_start();
 
 $servername = "localhost";
 $username = "root";
@@ -9,7 +9,7 @@ $databasename = "projekt";
 $conn = new mysqli($servername, $username, $password, $databasename);
 
 if ($conn->connect_error) {
-    die("Something went wrong. Please try again later.: " . $conn->connect_error);
+    die("Něco se pokazilo. Prosím zkuste to později: " . $conn->connect_error);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,11 +21,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql_check_user = "SELECT * FROM users WHERE nickname = '$nickname'";
     $result_check_user = $conn->query($sql_check_user);
 
-    if ($result_check_user->num_rows == 1) {
+    if ($result_check_user && $result_check_user->num_rows == 1) {
         $row = $result_check_user->fetch_assoc();
 
         if (password_verify($password, $row["password"])) {
-            $_SESSION['user_id'] = $row["id"];
+            $_SESSION['user_id'] = $row["user_id"];
             $_SESSION["user_email"] = $row["email"];
             $_SESSION["user_nickname"] = $row["nickname"];
             echo "<script>alert('Úspěšně přihlášen.')</script>";
