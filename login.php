@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["user_email"] = $row["email"];
             $_SESSION["user_nickname"] = $row["nickname"];
             echo "<script>alert('Úspěšně přihlášen.')</script>";
-            echo "<script>window.location.href = 'admin.html';</script>";
+            echo "<script>window.location.href = 'admin.php';</script>";
             exit();
         } else {
             echo "<script>alert('Špatné heslo.')</script>";

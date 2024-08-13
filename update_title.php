@@ -10,10 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+        die("Připojení selhalo: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO admin (nadpis) VALUES (?)";
+    $sql = "UPDATE admin SET nadpis = ? WHERE id = 1"; 
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $newTitle);
 

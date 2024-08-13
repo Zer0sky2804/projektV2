@@ -32,13 +32,20 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('file-input').addEventListener('change', function(event) {
         const file = event.target.files[0];
         if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const img = document.getElementById('uploaded-image');
-                img.src = e.target.result;
-                img.style.display = 'block';
-            }
-            reader.readAsDataURL(file);
+            const formData = new FormData();
+            formData.append('image', file);
+            
+            fetch('update_image.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                
+                window.location.href = 'admin.php';
+            })
+            .catch(error => console.error('Error updating image:', error));
         }
     });
 });

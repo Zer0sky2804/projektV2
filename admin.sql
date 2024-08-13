@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Počítač: 127.0.0.1
--- Vytvořeno: Stř 19. čen 2024, 13:42
+-- Vytvořeno: Úte 13. srp 2024, 11:08
 -- Verze serveru: 10.4.32-MariaDB
 -- Verze PHP: 8.2.12
 
@@ -29,9 +29,37 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
-  `nadpis` int(11) NOT NULL,
-  `nazev` int(11) NOT NULL
+  `nadpis` varchar(40) NOT NULL,
+  `nazev` varchar(40) NOT NULL,
+  `pic_dir` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Vypisuji data pro tabulku `admin`
+--
+
+INSERT INTO `admin` (`id`, `nadpis`, `nazev`, `pic_dir`) VALUES
+(1, 'BlogPage', '', '');
+
+--
+-- Indexy pro exportované tabulky
+--
+
+--
+-- Indexy pro tabulku `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pro tabulky
+--
+
+--
+-- AUTO_INCREMENT pro tabulku `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -14,7 +14,7 @@ body {
 }
 
 .hl {
-    font-size: 54px;
+    font-size: 30px;
     font-weight: bold;
     color: #ffffff;
     padding: 1.5%;
@@ -99,4 +99,11 @@ button:hover {
 
 .file-input {
     margin-bottom: 20px;
+}
+form input {
+    padding: 2%;
+    border: 1px solid #444; 
+    border-radius: 4px;
+    background-color: #2e2e2e; 
+    color: #ffffff; 
 }

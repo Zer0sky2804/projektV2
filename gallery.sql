@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Počítač: 127.0.0.1
--- Vytvořeno: Úte 02. čec 2024, 18:04
+-- Vytvořeno: Pon 12. srp 2024, 12:15
 -- Verze serveru: 10.4.32-MariaDB
 -- Verze PHP: 8.2.12
 
@@ -30,7 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `gallery` (
   `picture_id` int(11) NOT NULL,
   `pictures_name` varchar(50) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `img_dir` varchar(455) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
