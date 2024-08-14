@@ -42,18 +42,21 @@ if ($result->num_rows > 0) {
 </head>
 <body>
     <header>
-        <h1>Novinky</h1>
+    <div class="a"><a href="admin.php">Hlavní stránka</a></div>
+    <div class="hl"><hl class="hl">Novinky</hl></div>
     </header>
     <main>
-        <?php
-        foreach ($buttons as $button) {
-            echo '<form action="newdetail.php" method="post">';
-            echo '<input type="hidden" name="id" value="' . htmlspecialchars($button['blog_id']) . '">';
-            echo '<button type="submit">' . htmlspecialchars($button['title']) . '</button>';
-            echo '</form>';
-            
-        }
+        <div class="container">
+            <?php
+            foreach ($buttons as $button) {
+                echo '<form action="newdetail.php" method="get">';
+                echo '<input type="hidden" name="blog_id" value="' . htmlspecialchars($button['blog_id']) . '">';
+                echo '<button type="submit">' . htmlspecialchars($button['title']) . '</button>';
+                echo '</form>';
+                
+            }
         ?>
+        </div>
     </main>
 </body>
 </html>

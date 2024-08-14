@@ -7,6 +7,7 @@
 </head>
 <body>
     <div class="header">
+        <div class="a"><a href="admin.php">Hlavní stránka</a></div>
         <div class="hl"><h1>Galerie</h1></div>
     </div>
 

@@ -16,7 +16,7 @@
         <a href="creator.html">Creator</a>
         <a href="novinky.php">Novinky</a>
         <a href="galerie.php">Galerie</a>
-        <a href="sett.html">Nastavení</a>
+        <a href="sett.php">Nastavení</a>
         <a href="register.html">Přidat uživatele</a>
         <a href="logout.php">Odhlásit se</a>
     </div>
@@ -36,13 +36,13 @@
                 die("Připojení selhalo: " . $conn->connect_error);
             }
 
-            $sql = "SELECT nazev, pic_dir FROM admin WHERE pic_dir != ''";  
+            $sql = "SELECT pic_dir FROM admin WHERE pic_dir != ''";  
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="gallery-item">';
-                    echo '<img src="' . htmlspecialchars($row["pic_dir"], ENT_QUOTES) . '" alt="' . htmlspecialchars($row["nazev"], ENT_QUOTES) . '">';
+                    echo '<img src="' . htmlspecialchars($row["pic_dir"], ENT_QUOTES) . '" alt="Obrázek">';
                     echo '</div>';
                 }
             } else {
