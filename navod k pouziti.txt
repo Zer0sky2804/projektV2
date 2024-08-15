@@ -1,0 +1,3 @@
+První se uživatel musí přihlásit. Potom už si uživatel může zvolit co bude dělat dál.
+Můžete si založit novinku což je dobře pochopitelné na stránce. To stejné platí pro další části jako 
+nastavení, novinky, kde si uživatel může prohlédnout novinky, které vytvořil nebo je upravit.
